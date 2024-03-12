@@ -1,0 +1,22 @@
+package tp_releve;
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class Conneccion {
+	Connection cn; 
+	public Conneccion(){  
+		try{
+			Class.forName("com.mysql.jdbc.Driver");
+			cn=DriverManager.getConnection("jdbc:mysql://localhost/dbnote","root","");
+	    System.out.println("Connection �tablie!");
+		}
+		catch(Exception e){
+			System.out.println("non connect�e!");
+			
+		}
+		
+	}
+    public Connection laConnection(){
+    	return cn;
+    }
+}
