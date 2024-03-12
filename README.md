@@ -1,0 +1,1 @@
+# pharmacy_manag_app
